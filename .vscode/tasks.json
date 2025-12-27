@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "configure",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -42,12 +42,12 @@
                 "reveal": "always",
                 "panel": "shared"
             },
-            "dependsOn": ["build"],
+            "dependsOn": ["configure"],
             "problemMatcher": []
         },
         {
             "label": "build",
-            "dependsOn": ["build", "compile"],
+            "dependsOn": ["configure", "compile"],
             "group": {
                 "kind": "build",
                 "isDefault": true

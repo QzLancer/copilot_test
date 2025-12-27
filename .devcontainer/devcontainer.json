@@ -1,0 +1,29 @@
+{
+    "name": "C++ Development",
+    "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-22.04",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake"
+            ],
+            "settings": {
+                "cmake.configureOnOpen": true
+            }
+        }
+    },
+
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gdb cmake g++ build-essential",
+
+    "remoteUser": "vscode"
+}

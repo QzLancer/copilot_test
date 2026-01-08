@@ -8,6 +8,7 @@
 
 using Vector3d = Eigen::Vector3d;
 using Vector2d = Eigen::Vector2d;
+using Matrix2d = Eigen::Matrix2d;
 
 // ==========================================
 // 1. 基础数据结构与枚举

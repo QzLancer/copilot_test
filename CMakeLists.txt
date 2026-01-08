@@ -6,5 +6,12 @@ project(CopilotTest VERSION 1.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add executable
+# Find Eigen3 library
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+
+# Add executables
 add_executable(copilot_test main.cpp)
+add_executable(mesh_projector AdvancedMeshProjector.cpp)
+
+# Link Eigen3 to mesh_projector
+target_link_libraries(mesh_projector Eigen3::Eigen)
